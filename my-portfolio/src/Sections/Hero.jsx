@@ -19,25 +19,25 @@ const Hero = () => {
 
   {/* RIGHT SIDE CONTENT */}
   <div className="flex-1 text-center md:text-left">
-    <h3 className="text-gray-500 font-semibold text-lg mb-2">Full Stack Developer</h3>
+    <h3 className="text-gray-300 font-semibold text-lg mb-2">Full Stack Developer</h3>
 
-    <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+    <h1 className="text-5xl md:text-5xl font-bold text-white mb-4">
       Poonam Vishwakarma
     </h1>
 
-    <p className="text-gray-600 font-semibold max-w-lg mb-6 leading-relaxed">
+    <p className="text-gray-300 text-sm md:text-xl max-w-lg mb-6 leading-relaxed">
      React | Node.js | Express | MongoDB
      Aspiring to leverage my skills to build impactful web applications and contribute to innovative projects.
     </p>
 
     {/* BUTTONS */}
     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-      <button className="px-6 py-3 border-2 border-[#d0ff00] text-[#d0ff00] rounded-full
-       font-semibold cursor-pointer hover:bg-[#d0ff00] hover:text-black transition duration-300">
+      <button className="px-6 py-3 border-2 border-[#00AA33] text-[#00AA33] rounded-full
+       font-semibold cursor-pointer hover:bg-[#00AA33] hover:text-black transition duration-300">
         Download CV
       </button>
 
-      <button className="px-6 py-3 bg-[#d0ff00] text-black rounded-full 
+      <button className="px-6 py-3 bg-[#00AA33] text-black rounded-full 
       font-semibold cursor-pointer hover:bg-lime-950 transition duration-300">
         Contact
       </button>
