@@ -32,13 +32,13 @@ const Hero = () => {
 
     {/* BUTTONS */}
     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-      <button className="px-6 py-3 border-2 border-[#00AA33] text-[#00AA33] rounded-full
-       font-semibold cursor-pointer hover:bg-[#00AA33] hover:text-black transition duration-300">
+      <button className="px-6 py-3 border-2 border-[#7C3AED] text-[#7C3AED] rounded-full
+       font-semibold cursor-pointer hover:bg-[#A78BFA] hover:text-black transition duration-300">
         Download CV
       </button>
 
-      <button className="px-6 py-3 bg-[#00AA33] text-black rounded-full 
-      font-semibold cursor-pointer hover:bg-lime-950 transition duration-300">
+      <button className="px-6 py-3 bg-[#7C3AED] text-black rounded-full 
+      font-semibold cursor-pointer hover:bg-[#A78BFA] transition duration-300">
         Contact
       </button>
     </div>
