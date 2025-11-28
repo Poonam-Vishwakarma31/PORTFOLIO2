@@ -3,7 +3,8 @@ import educationImg from "../assets/education.png";
 
 const Education = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col md:flex-row px-4 md:px-2 py-10 gap-12 items-center justify-center">
+    <div className="w-full min-h-screen flex flex-col md:flex-row px-4 md:px-2 py-10 gap-12 items-center justify-center"
+    id="education">
       <div className="education-body items-center justify-around w-full flex gap-8 md:gap-10 w-full">
          <div className="education-img w-64 h-64 md:w-xl md:h-96 hidden md:flex overflow-hidden left-0">
             <img src={educationImg} alt="Education" />

@@ -4,7 +4,8 @@ import Aboutme from "../assets/aboutme.png";
 
 const About = () => {
   return (
-    <div className="about-section relative w-full min-h-screen flex flex-col md:flex-row px-6 md:px-16 py-12 gap-12 items-center justify-center">
+    <div className="about-section relative w-full min-h-screen flex flex-col md:flex-row px-6 md:px-16 py-12 gap-12 items-center justify-center"
+    id="about">
       <div className="about-line absolute w-[85%] top-4  flex  items-center gap-2 p-2   ">
         <div className="style-circle bg-[#7C3AED] w-2 h-2 rounded-full"></div>
          <div className="style-circle bg-[#7C3AED] w-2 h-2 rounded-full"></div>

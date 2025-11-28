@@ -3,8 +3,9 @@ import profilePic from "../assets/pfp.jpg";
 
 const Hero = () => {
   return (
-   <section className="w-full min-h-screen flex flex-col md:flex-row items-center md:items-start justify-center 
-   px-6 md:px-16 py-12 gap-12">
+   <section className=" w-full min-h-screen flex flex-col md:flex-row items-center md:items-start justify-center 
+  px-6 md:px-16 py-12 gap-12"
+  id="home">
 
   {/* LEFT SIDE IMAGE */}
   <div className="flex-1 flex justify-center md:justify-start">
@@ -39,10 +40,19 @@ const Hero = () => {
       </button>
       </a>
 
-      <button className="px-6 py-3 bg-[#7C3AED] text-black rounded-full 
-      font-semibold cursor-pointer hover:bg-[#A78BFA] transition duration-300">
+      
+        <button className="px-6 py-3 bg-[#7C3AED] text-black rounded-full 
+      font-semibold cursor-pointer hover:bg-[#A78BFA] transition duration-300"
+      onClick={() => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+      }}>
         Contact
       </button>
+      
+      
     </div>
 
     

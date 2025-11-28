@@ -11,10 +11,12 @@ const Navbar = () => {
    const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <nav className="  top-0 left-0 w-full h-20 flex  justify-between items-center px-6 py-4 
-     bg-transparent z-50 mb-6  ">
+    <nav className="  top-0 left-0 w-full h-20 flex  justify-between items-center px-6 py-4  bg-transparent z-50 mb-6  "
+    id="navbar">
       <div className="  justify-self px-4 sm:px-6 lg:px-8 items-center">
+        <a href="home">
         <h4  className="playwrite-nz-guides-regular font-bold text-5xl shadow-xl">PV</h4>
+        </a>
       </div>
 
       <div className="menu ">
