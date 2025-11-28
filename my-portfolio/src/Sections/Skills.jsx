@@ -39,7 +39,7 @@ export default function SkillsMarquee() {
       className="skill-section items-center justify-center w-full min-h-[50vh] flex flex-col px-4 md:px-8 py-12 gap-12"
       id="skills"
     >
-      <div className="skill-header text-5xl text-[#7C3AED] mb-8 font-bold">My Skills</div>
+      <div className="skill-header text-5xl text-[#7C3AED] mb-6 font-bold">My Skills</div>
 
       <div className="scroll-skills w-full">
         <div
