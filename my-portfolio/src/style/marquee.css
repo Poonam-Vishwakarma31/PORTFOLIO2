@@ -1,0 +1,45 @@
+.marquee-track {
+	display: flex;
+	width: max-content;
+	z-index: 1;
+	animation: marquee 18s linear infinite;
+	flex-wrap: nowrap;
+	will-change: transform;
+}
+
+.marquee-track > * {
+	/* Prevent children from shrinking/growing so total width is predictable */
+	flex: 0 0 auto;
+}
+
+.marquee-container {
+	overflow: hidden;
+	width: 100%;
+	cursor: pointer;
+	position: relative;
+}
+
+.marquee-container.paused .marquee-track {
+	animation-play-state: paused;
+}
+
+.marquee-container:hover .marquee-track {
+	animation-play-state: paused;
+}
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+	/* Move left by half the track width (the size of the original content). */
+	to {
+		transform: translateX(-50%);
+	}
+}
+
+.marquee-track, .marquee-container {
+	-webkit-backface-visibility: hidden; /* smoother on some browsers */
+}
+
+
+
