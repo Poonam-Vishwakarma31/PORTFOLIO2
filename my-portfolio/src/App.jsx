@@ -5,7 +5,6 @@ import About from './Sections/About'
 import Skills from './Sections/Skills'
 import Projects from './Sections/Projects'
 import Contact from './Sections/Contact'
-import Footer from './Components/Footer'
 import Education from './Sections/Education'
 import './index.css'
 
@@ -26,7 +25,7 @@ function App() {
         setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
       } else {
         setTimeout(() => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }), 50);
-        
+
       }
     }
   }, []);

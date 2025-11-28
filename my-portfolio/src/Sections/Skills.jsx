@@ -16,9 +16,8 @@ import {
 
 export default function SkillsMarquee() {
   // manual pause (click) and hover pause combined
-  const [manualPaused, setManualPaused] = useState(false);
-  const [hoverPaused, setHoverPaused] = useState(false);
-  const paused = manualPaused || hoverPaused;
+  const [paused, setPaused] = useState(false);
+  
 
   const skills = [
     { name: "React", icon: <SiReact size={28} /> },
@@ -44,9 +43,7 @@ export default function SkillsMarquee() {
       <div className="scroll-skills w-full">
         <div
           className={`marquee-container ${paused ? "paused" : ""} item-center overflow-hidden whitespace-nowrap`}
-          onClick={() => setManualPaused((p) => !p)}
-          onMouseEnter={() => setHoverPaused(true)}
-          onMouseLeave={() => setHoverPaused(false)}
+          onClick={() => setPaused((p) => !p)}
         >
           <div className="marquee-track gap-8 whitespace-nowrap flex flex-nowrap">
             {/* render the same `skills` list twice in the DOM without creating a separate duplicated array */}

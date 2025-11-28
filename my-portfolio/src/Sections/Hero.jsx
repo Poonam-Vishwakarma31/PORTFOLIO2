@@ -1,14 +1,15 @@
 import React from "react";
 import profilePic from "../assets/pfp.jpg";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
   return (
    <section className=" w-full min-h-screen flex flex-col md:flex-row items-center md:items-start justify-center 
-  px-6 md:px-16 py-12 gap-12"
+  px-6 md:px-8 py-12 gap-12 md:gap-46"
   id="home">
 
   {/* LEFT SIDE IMAGE */}
-  <div className="flex-1 flex justify-center md:justify-start">
+  <div className=" flex flex-col justify-center md:justify-end">
     <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl">
       <img
         src={profilePic}
@@ -16,6 +17,38 @@ const Hero = () => {
         alt="Profile"
       />
     </div>
+    {/* {/* social icons */}
+    <div className="social-icon hidden md:flex justify-center flex items-center gap-8 mt-12"> 
+                <a
+                  href="https://github.com/Poonam-Vishwakarma31"
+                  aria-label="GitHub"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#7C3AED] transition-colors"
+                >
+                  <FaGithub size={32} />
+                </a>
+    
+                <a
+                  href="https://www.linkedin.com/in/poonam-vish/"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#0A66C2] transition-colors"
+                >
+                  <FaLinkedin size={32} />
+                </a>
+    
+                <a
+                  href="https://www.instagram.com/pv_poonam31"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-pink-500 transition-colors"
+                >
+                  <FaInstagram size={32} />
+                </a>
+              </div>
   </div>
 
   {/* RIGHT SIDE CONTENT */}
