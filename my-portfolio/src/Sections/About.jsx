@@ -1,5 +1,5 @@
 import React from "react";
-import Aboutme from "../assets/aboutme.png";
+
 
 
 const About = () => {
@@ -20,7 +20,7 @@ const About = () => {
              I love creating dynamic and responsive web applications that provide seamless user experiences. My goal is to leverage my skills to build impactful web applications and contribute to innovative projects.</p>
         </div>
           <div className="about-image w-64 h-45 md:w-100 md:h-100 mt-18  overflow-hidden ">
-          <img src={Aboutme} alt="About Me" className="mt-[24px] md:mt-[70px]" />
+          <img src="/images/sections/aboutme.webp" alt="About Me" className="mt-[24px] md:mt-[70px]" />
         </div>
       </div>
     </div>

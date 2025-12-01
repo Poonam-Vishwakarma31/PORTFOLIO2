@@ -1,8 +1,6 @@
 import React from 'react'
 import { ProjectCard } from '../Components/ProjectCard'
-import ngoImage from '../assets/NGO.png'
-import todoImage from '../assets/todo.jpg'
-import currencyImage from '../assets/currency1.jpg'
+
 
 const Projects = () => {
   const project = [
@@ -10,21 +8,21 @@ const Projects = () => {
         title: "NGO Website",
         description: "A website for a non-profit organization to showcase their work and accept donations.",
         techStack: ["React", "Tailwind", "React Router"],
-        image: ngoImage,
+        image: "/images/project/ngo.webp",
         githubLink: "https://github.com/Poonam-Vishwakarma31/NGOAPP"
     },
     {
         title: "To-Do App",
         description: "A simple to-do list application to manage daily tasks.",
         techStack: ["React", "Tailwind", "Redux"],
-        image: todoImage,
+        image: "/images/project/todo.webp",
         githubLink: "https://github.com/Poonam-Vishwakarma31/ToDo-Redux"
     },
     {
         title: "Currency Converter",
         description: "An app to convert currencies using real-time exchange rates.",
         techStack: ["HTML", "CSS", "JavaScript", "API Integration"],
-        image: currencyImage,
+        image: "/images/project/currency.webp",
         githubLink: "https://github.com/Poonam-Vishwakarma31/currency-converter"
     }
 ]

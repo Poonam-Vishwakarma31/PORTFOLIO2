@@ -1,5 +1,4 @@
 import React from "react";
-import profilePic from "../assets/pfp.jpg";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Hero = () => {
@@ -12,7 +11,7 @@ const Hero = () => {
   <div className=" flex flex-col justify-center md:justify-end">
     <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl">
       <img
-        src={profilePic}
+        src="/images/profile/pfp.webp"
         className="w-full h-full object-cover"
         alt="Profile"
       />

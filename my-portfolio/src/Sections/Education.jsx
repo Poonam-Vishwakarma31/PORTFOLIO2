@@ -1,5 +1,5 @@
 import React from "react";
-import educationImg from "../assets/education.png";
+
 
 const Education = () => {
   return (
@@ -7,7 +7,7 @@ const Education = () => {
     id="education">
       <div className="education-body items-center justify-around w-full flex gap-8 md:gap-10 w-full">
          <div className="education-img w-64 h-64 md:w-xl md:h-96 hidden md:flex overflow-hidden left-0">
-            <img src={educationImg} alt="Education" />
+            <img src="/images/sections/education.webp" alt="Education" />
          </div>
 
          <div className="education-list pr-4 pl-4 md:pr-[100px]">

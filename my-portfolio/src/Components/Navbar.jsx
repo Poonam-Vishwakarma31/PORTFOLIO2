@@ -1,5 +1,3 @@
-import React from "react";
-import Logo from "../assets/pfp.jpg";
 import { RiMenuLine } from "react-icons/ri";
 import { useState } from "react";
 import OverlayMenu from "./OverlayMenu";
