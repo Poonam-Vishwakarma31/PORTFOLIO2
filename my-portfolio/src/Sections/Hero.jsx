@@ -12,6 +12,7 @@ const Hero = () => {
     <div className="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden shadow-xl">
       <img
         src="/images/profile/pfp.webp"
+        loading="lazy"
         className="w-full h-full object-cover"
         alt="Profile"
       />

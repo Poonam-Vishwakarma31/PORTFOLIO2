@@ -8,21 +8,21 @@ const Projects = () => {
         title: "NGO Website",
         description: "A website for a non-profit organization to showcase their work and accept donations.",
         techStack: ["React", "Tailwind", "React Router"],
-        image: "/images/project/ngo.webp",
+        image: "/images/project/ngo.webp", loading:"lazy",
         githubLink: "https://github.com/Poonam-Vishwakarma31/NGOAPP"
     },
     {
         title: "To-Do App",
         description: "A simple to-do list application to manage daily tasks.",
         techStack: ["React", "Tailwind", "Redux"],
-        image: "/images/project/todo.webp",
+        image: "/images/project/todo.webp", loading:"lazy",
         githubLink: "https://github.com/Poonam-Vishwakarma31/ToDo-Redux"
     },
     {
         title: "Currency Converter",
         description: "An app to convert currencies using real-time exchange rates.",
         techStack: ["HTML", "CSS", "JavaScript", "API Integration"],
-        image: "/images/project/currency.webp",
+        image: "/images/project/currency.webp", loading:"lazy",
         githubLink: "https://github.com/Poonam-Vishwakarma31/currency-converter"
     }
 ]

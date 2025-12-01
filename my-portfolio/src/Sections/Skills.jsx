@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useMemo } from "react";
-import "../style/marquee.css"; // important
 import {
   SiReact,
   SiJavascript,
@@ -13,13 +12,13 @@ import {
   SiHtml5,
   SiCss3,
 } from "react-icons/si";
+import "../style/marquee.css";
 
 export default function SkillsMarquee() {
   const [paused, setPaused] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const marqueeRef = useRef(null);
 
-  // Memoize skills array so it's not recreated on every render
   const skills = useMemo(
     () => [
       { name: "React", icon: <SiReact size={28} /> },
@@ -37,47 +36,36 @@ export default function SkillsMarquee() {
     []
   );
 
-  // Intersection observer: only render marquee when in viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsVisible(entry.isIntersecting);
-      },
-      { threshold: 0.1 } // Trigger when 10% visible
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 }
     );
-
-    if (marqueeRef.current) {
-      observer.observe(marqueeRef.current);
-    }
-
+    if (marqueeRef.current) observer.observe(marqueeRef.current);
     return () => {
-      if (marqueeRef.current) {
-        observer.unobserve(marqueeRef.current);
-      }
+      if (marqueeRef.current) observer.unobserve(marqueeRef.current);
     };
   }, []);
 
   return (
     <div
       ref={marqueeRef}
-      className="skill-section items-center justify-center w-full min-h-[50vh] flex flex-col px-4 md:px-8 py-12 gap-12"
+      className="skill-section flex flex-col items-center justify-center w-full min-h-[50vh] px-4 md:px-8 py-12 gap-12"
       id="skills"
     >
       <div className="skill-header text-5xl text-[#7C3AED] mb-6 font-bold">
         My Skills
       </div>
 
-      {/* Only render the marquee when it's visible in the viewport */}
       {isVisible && (
         <div className="scroll-skills w-full">
           <div
             className={`marquee-container ${
               paused ? "paused" : ""
-            } item-center overflow-hidden whitespace-nowrap`}
+            } flex overflow-hidden whitespace-nowrap`}
             onClick={() => setPaused((p) => !p)}
           >
-            <div className="marquee-track gap-8 whitespace-nowrap flex flex-nowrap">
-              {/* render the same `skills` list twice in the DOM without creating a separate duplicated array */}
+            <div className="marquee-track flex flex-nowrap gap-8 whitespace-nowrap">
               {[0, 1].map((rep) =>
                 skills.map((skill, i) => (
                   <div

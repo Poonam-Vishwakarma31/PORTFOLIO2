@@ -80,14 +80,18 @@ export default function ContactSection() {
           <input
             type="text"
             id="name"
+            name="user-name"
             placeholder="Name"
+            autoComplete="name"
             required
             className="p-3 rounded-md border w-full"
           />
           <input
             type="email"
             id="email"
+            name="user-email"
             placeholder="Email"
+            autoComplete="email"
             required
             className="p-3 rounded-md border w-full"
           />
