@@ -9,7 +9,7 @@ import './index.css'
 
 
 // Lazy-load SkillsMarquee
-const SkillsMarquee = React.lazy(() => import("./Sections/Skills"));
+const SkillsMarquee = React.lazy(() => import("./Sections/Skills/Skills"));
 
 
 function App() {

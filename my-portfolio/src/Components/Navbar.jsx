@@ -2,7 +2,7 @@ import React, { useState, lazy, Suspense } from "react";
 import { RiMenuLine } from "react-icons/ri";
 
 // Lazy-load the overlay menu (framer-motion heavy) to keep the main bundle small.
-const OverlayMenu = lazy(() => import("./OverlayMenu"));
+const OverlayMenu = lazy(() => import("./OverlayMenu/OverlayMenu"));
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
