@@ -12,7 +12,7 @@ import {
   SiHtml5,
   SiCss3,
 } from "react-icons/si";
-import "../style/marquee.css";
+import "./marquee.css";
 
 export default function SkillsMarquee() {
   const [paused, setPaused] = useState(false);

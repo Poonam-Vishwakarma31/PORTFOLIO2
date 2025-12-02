@@ -41,7 +41,7 @@ export function ProjectCard({
           <div className="absolute inset-0 flex items-center justify-center animate-pulse bg-gradient-to-r from-[#111014] via-[#1a1625] to-[#111014]"></div>
         )}
         <img
-          src={imgVisible ? image : ""}
+          src={imgVisible ? image : null}
           alt={title}
           className={`w-full h-40 object-cover rounded-md transition-opacity duration-500 ${
             imgLoaded ? "opacity-100" : "opacity-0"

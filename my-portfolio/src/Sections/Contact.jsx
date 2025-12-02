@@ -1,45 +1,88 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiMail, FiPhone } from "react-icons/fi";
+import { useState } from "react";
 
 export default function ContactSection() {
+  const [status, setStatus] = useState({ show: false, message: "", type: "" });
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setStatus({ show: true, message: "Sending...", type: "info" });
+    const formData = new FormData(event.target);
+    formData.append("access_key", "659d3d1d-0777-4def-99a6-477b9af7fd52");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setStatus({
+        show: true,
+        message: "Message sent successfully!",
+        type: "success",
+      });
+      event.target.reset();
+    } else {
+      setStatus({
+        show: true,
+        message: "Something went wrong. Please try again later.",
+        type: "error",
+      });
+    }
+
+    setTimeout(() => {
+      setStatus({ show: false, message: "", type: "" });
+    }, 3000);
+  };
+
+
+
+
   return (
     <section
       className="relative w-full  items-stretch bg-[#0D0B16] text-white py-12 px-6 flex gap-4 md:gap-12 flex-col items-center font-[poppins]"
       id="contact"
     >
       <div className="contact-header mb-16 text-center">
-        <h2 className="text-5xl text-[#7C3AED] font-bold mb-4 text-center">Get In Touch</h2>
-        <p>"I’m always open to new opportunities and conversations. Let’s get in touch."</p>
+        <h2 className="text-5xl text-[#7C3AED] font-bold mb-4 text-center">
+          Get In Touch
+        </h2>
+        <p>
+          "I’m always open to new opportunities and conversations. Let’s get in
+          touch."
+        </p>
       </div>
 
       <div className=" max-w-6xl  w-full grid md:grid-cols-[250px_1fr] gap-10">
         {/* Left Section with my contact + Social Icons */}
         <div className="flex flex-col items-center md:items-start space-y-6 order-2 md:order-1">
-
           {/* Contact Info */}
           <div className="myContact">
-              <div className="space-y-2 flex flex-col">
-            <p className="font-semibold">Email</p>
-            <a
-              href="mailto:yourmail@gmail.com"
-              className="flex items-center gap-3 text-white/90 hover:underline"
-            >
-              <FiMail size={28} className="text-[#7C3AED]" />
-              <span className="text-white/70">agclub31@gmail.com</span>
-            </a>
-          </div>
+            <div className="space-y-2 flex flex-col">
+              <p className="font-semibold">Email</p>
+              <a
+                href="mailto:yourmail@gmail.com"
+                className="flex items-center gap-3 text-white/90 hover:underline"
+              >
+                <FiMail size={28} className="text-[#7C3AED]" />
+                <span className="text-white/70">agclub31@gmail.com</span>
+              </a>
+            </div>
 
-          <div className="space-y-2 flex flex-col">
-            <p className="font-semibold">Phone</p>
-            <a
-              href="tel:+919876543210"
-              className="flex items-center gap-3 text-white/90 hover:underline"
-            >
-              <FiPhone size={28} className="text-[#7C3AED]" />
-              <span className="text-white/70">+91 9179332054</span>
-            </a>
-          </div>
+            <div className="space-y-2 flex flex-col">
+              <p className="font-semibold">Phone</p>
+              <a
+                href="tel:+919876543210"
+                className="flex items-center gap-3 text-white/90 hover:underline"
+              >
+                <FiPhone size={28} className="text-[#7C3AED]" />
+                <span className="text-white/70">+91 9179332054</span>
+              </a>
+            </div>
           </div>
           {/* social icons */}
           <div className="social-icon flex items-center gap-4 mt-2">
@@ -76,7 +119,10 @@ export default function ContactSection() {
         </div>
 
         {/* Form Section */}
-        <form className="form order-1 md:order-2 w-full grid grid-cols-1 sm:grid-cols-2 gap-4 bg-[#1A1824] p-4 rounded-xl shadow-lg">
+        <form
+          onSubmit={onSubmit}
+          className="form order-1 md:order-2 w-full grid grid-cols-1 sm:grid-cols-2 gap-4 bg-[#1A1824] p-4 rounded-xl shadow-lg"
+        >
           <input
             type="text"
             id="name"
@@ -103,9 +149,14 @@ export default function ContactSection() {
             className="p-3 rounded-md border w-full sm:col-span-2 h-28"
           />
 
-          <button className="bg-black text-white px-5 py-3 rounded-lg sm:col-span-2 w-full">
+          <button className="bg-black text-white px-5 py-3 rounded-lg sm:col-span-2 w-full hover:bg-gray-800 transition">
             Send
           </button>
+          {status.show && (
+            <p className={`sm:col-span-2 text-center mt-2 ${status.type}`}>
+              {status.message}
+            </p>
+          )}
         </form>
       </div>
     </section>
