@@ -66,7 +66,7 @@ const Hero = () => {
 
     {/* BUTTONS */}
     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-      <a href="/pvResume.pdf" download>
+      <a href="/PoonamV-Resume.pdf" download>
       <button className="px-6 py-3 border-2 border-[#7C3AED] text-[#7C3AED] rounded-full
        font-semibold cursor-pointer hover:bg-[#A78BFA] hover:text-black transition duration-300">
         Download CV
